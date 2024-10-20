@@ -10,13 +10,14 @@ public class Travel : MonoBehaviour
     private bool isMoving = false;  
 
     private Transform player;
-    private FirstPersonController playerMovement;
+    [SerializeField] private FirstPersonController playerMovement;
 
     void Update()
     {    
         if (isMoving && currentPositionIndex < positions.Length)
         {
             MoveObject();
+            player.position = transform.position;
         }
     }
 
@@ -35,7 +36,8 @@ public class Travel : MonoBehaviour
                 if (player != null)
                 {
                     player.SetParent(null);  // Detach player when the object reaches the last position
-                    playerMovement.enabled = true;
+                    playerMovement.playerCanMove = true;
+                    playerMovement.GetComponent<Rigidbody>().useGravity = true;
                 }
             }
         }
@@ -49,7 +51,8 @@ public class Travel : MonoBehaviour
             player.SetParent(transform);
             isMoving = true;
             playerMovement = other.GetComponent<FirstPersonController>();
-            other.GetComponent<FirstPersonController>().enabled = false;
+            other.GetComponent<Rigidbody>().useGravity = false;
+            playerMovement.playerCanMove = false;
         }
     }
 }
