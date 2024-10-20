@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 #if UNITY_EDITOR
     using UnityEditor;
     using System.Net;
@@ -203,9 +204,12 @@ public class FirstPersonController : MonoBehaviour
     private void Update()
     {
         #region Camera
-
+        if (Input.GetMouseButtonDown(0))  // 0 is the left mouse button
+        {
+            CastRayFromCamera();
+        }
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -472,6 +476,22 @@ public class FirstPersonController : MonoBehaviour
         if(isCrouched && !holdToCrouch)
         {
             Crouch();
+        }
+    }
+    void CastRayFromCamera()
+    {
+        // Generate a ray from the camera to the mouse position
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
+        // Check if the ray hits an object
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Clickable")))
+        {
+            IClickable clickable = hit.collider.GetComponent<IClickable>();
+            if (clickable != null)
+            {
+                clickable.OnClick();
+            }
         }
     }
 
