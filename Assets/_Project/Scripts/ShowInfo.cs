@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowInfo : MonoBehaviour
+public class ShowInfo : MonoBehaviour, IClickable
 {
     public GameObject panelToShow;
+    bool showingPanel;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnClick()
     {
-        panelToShow.SetActive(true);
+        showingPanel = !showingPanel;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        panelToShow.SetActive(false);
+        if (showingPanel)
+        {
+            panelToShow.SetActive(false);
+        }
+        else
+        {
+            panelToShow.SetActive(true);
+        }
     }
 }
