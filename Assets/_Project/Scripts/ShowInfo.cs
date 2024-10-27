@@ -10,7 +10,11 @@ public class ShowInfo : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        showingPanel = !showingPanel;
+        if (panelToShow != null) showingPanel = !showingPanel;
+        else
+        {
+            Debug.Log("There's no panel");
+        }
     }
 
     private void Update()
