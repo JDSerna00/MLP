@@ -21,11 +21,11 @@ public class ShowInfo : MonoBehaviour, IClickable
     {
         if (showingPanel)
         {
-            panelToShow.SetActive(false);
+            panelToShow.SetActive(true);
         }
         else
         {
-            panelToShow.SetActive(true);
+            panelToShow.SetActive(false);
         }
     }
 }
