@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e52b943760d24f84d09cf77b76aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModelShowed: {fileID: 0}
+  ModelShowed: {fileID: 5339464345751616507, guid: e555a00997f1b3e46bb0404e51c9da8e,
+    type: 3}
   ModelsHideed:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 171230628824939352, guid: cc294d8005f69a646a79688f7bb8ef50, type: 3}
+  - {fileID: 455001707756716327, guid: 6482285e04d36254f89c1af737b13813, type: 3}
+  - {fileID: 5512878147148087527, guid: 7f4e892ebf399c442a357552848d36ab, type: 3}
 --- !u!135 &7118964197707578786
 SphereCollider:
   m_ObjectHideFlags: 0
