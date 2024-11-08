@@ -8,42 +8,42 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 10
-    second: {fileID: 2100000, guid: f5a063d835dfadf4d81983a543ce7ad1, type: 2}
+    second: {fileID: 2100000, guid: 0286902bbd2ec5e46b3d9688fd03327e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 11
-    second: {fileID: 2100000, guid: db8f4bf9d34351647a8173c01efb5875, type: 2}
+    second: {fileID: 2100000, guid: 8982202983bd6e44ca708344354deca5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 2
-    second: {fileID: 2100000, guid: 562565d7b21e76c4880fd0ff5fd45d8c, type: 2}
+    second: {fileID: 2100000, guid: 89c2b241fcc8aa94e9c961349eb28a0f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 9
-    second: {fileID: 2100000, guid: ac9038c66b92404488f00a9f1a73c8ad, type: 2}
+    second: {fileID: 2100000, guid: 12b02ba225bd7514ea234b2dd713e9bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black hole
-    second: {fileID: 2100000, guid: 0994af51b31bceb4ea887e557046629b, type: 2}
+    second: {fileID: 2100000, guid: 046ca655c1d4d3140a618e35c00ebe82, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hairs
-    second: {fileID: 2100000, guid: c46b2bd469ec43b49a0747e91e6149f3, type: 2}
+    second: {fileID: 2100000, guid: a0bbce31eafa5de48b8a856205e57aad, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 6d7fb20721dc6004d98357e6243ffab8, type: 2}
+    second: {fileID: 2100000, guid: b74f7b5536d7ad647b1797c6ce906720, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: b9ed780a0e0c74c47b667884d03737fc, type: 2}
+    second: {fileID: 2100000, guid: d3e5e9ce72da2244d98ff8e9c627fa3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
