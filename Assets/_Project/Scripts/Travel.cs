@@ -39,6 +39,8 @@ public class Travel : MonoBehaviour
                     player.SetParent(null);  // Detach player when the object reaches the last position
                     playerMovement.playerCanMove = true;
                     playerMovement.GetComponent<Rigidbody>().useGravity = true;
+                    Travel travel = GetComponent<Travel>();
+                    travel.enabled = false;
                 }
             }
         }
