@@ -7,7 +7,8 @@ public class Travel : MonoBehaviour
     public Transform[] positions; 
     public float moveSpeed = 2f;  
     private int currentPositionIndex = 0;  
-    private bool isMoving = false;  
+    private bool isMoving = false;
+    public float offsetY;
 
     private Transform player;
     [SerializeField] private FirstPersonController playerMovement;
@@ -17,7 +18,7 @@ public class Travel : MonoBehaviour
         if (isMoving && currentPositionIndex < positions.Length)
         {
             MoveObject();
-            player.position = transform.position;
+            player.position = transform.position + new Vector3(0, offsetY, 0);
         }
     }
 

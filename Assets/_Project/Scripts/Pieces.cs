@@ -14,17 +14,20 @@ public class Pieces : MonoBehaviour, IClickable
     private bool travelling = false;
 
     private void Start()
-    {
-        startPos = transform.position;
+    {       
     }
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, targetPos.position) < 0.1f)
+        if (piecePanelInfo != null)
         {
-            piecePanelInfo.SetActive(true);
+            if (Vector3.Distance(transform.position, targetPos.position) < 0.1f)
+            {
+                piecePanelInfo.SetActive(true);
+            }
+            else { piecePanelInfo.SetActive(false); } 
         }
-        else { piecePanelInfo.SetActive(false); }
+       
         if (travelling) 
         {
             var step = Time.deltaTime * speed;
@@ -39,7 +42,8 @@ public class Pieces : MonoBehaviour, IClickable
     public void OnClick()
     {
         Debug.Log($"Touched this piece{gameObject}");
-        travelling=true;
+        startPos = transform.position;
+        travelling =true;
         isMovingToTarget = !isMovingToTarget;
     }
     // Start is called before the first frame update

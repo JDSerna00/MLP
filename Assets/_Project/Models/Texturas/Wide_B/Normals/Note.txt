@@ -1,0 +1,3 @@
+These bump (normal) maps are used by the Source Engine to influence the the "$PhongExponent" values within the Phong shader. The alpha channel of the bump map acts as a Phong mask. The purpose in this case was to prevent darkened areas from the baked AO from appearing as reflective as brighter spots.
+
+Learn more here: https://developer.valvesoftware.com/wiki/$phong
