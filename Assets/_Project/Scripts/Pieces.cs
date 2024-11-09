@@ -14,7 +14,8 @@ public class Pieces : MonoBehaviour, IClickable
     private bool travelling = false;
 
     private void Start()
-    {       
+    {
+        startPos = transform.position;  
     }
 
     private void Update()
@@ -42,8 +43,7 @@ public class Pieces : MonoBehaviour, IClickable
     public void OnClick()
     {
         Debug.Log($"Touched this piece{gameObject}");
-        startPos = transform.position;
-        travelling =true;
+        travelling = true;
         isMovingToTarget = !isMovingToTarget;
     }
     // Start is called before the first frame update
